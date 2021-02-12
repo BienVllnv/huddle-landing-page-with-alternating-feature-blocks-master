@@ -31,6 +31,10 @@ body {
     line-height: 1.5;
 }
 
+a {
+    text-decoration: none;
+}
+
 .cta {
     cursor: pointer;
     font-family: var(--ff-1);
@@ -38,7 +42,19 @@ body {
     padding: 16px 53px;
     border: none;
     border-radius: 25px;
+}
+
+.shadow {
     box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-btn:hover, .article-btn:hover {
+    opacity: 0.7;
 }
 
 /* Header Section */
@@ -93,22 +109,15 @@ header {
     margin-top: 32px;
 }
 
-.header-btn:hover {
-    opacity: 0.4;
-}
-
 /* Main Section */
 
 main {
-    display: flex;
-    flex-direction: column;
     gap: 2em;
     position: relative;
 }
 
 .card {
     border-radius: 10px;
-    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
     display: flex;
     gap: 18em;
     width: 90%;
@@ -117,7 +126,6 @@ main {
 }
 
 .card article {
-    flex: 1;
     align-self: center;
 }
 
@@ -143,7 +151,6 @@ main {
     padding: 4.5em 0 3em 0;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
     position: relative;
     bottom: -95px;
 }
@@ -151,11 +158,6 @@ main {
 .article-btn {
     color: #fff;
     background: var(--primary);
-    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);
-}
-
-.article-btn:hover {
-    opacity: 0.7;
 }
 
 /* Footer Section */
@@ -163,13 +165,80 @@ main {
 footer {
     background: var(--neutral-b);
     color: #fff;
+    font-size: 14px;
     padding: 140px 97px 63px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 3fr;
+    grid-template-rows: 30px auto;
+    gap: 70px 115px;
+    grid-template-areas: 
+    "logo ... ... ..."
+    "contact about career icons"
+    ;
+}
+
+.footer-logo {
+    grid-area: logo;
+    
+}
+
+.footer-logo img {
+    filter: brightness(0) invert(1);
+}
+
+footer a {
+    color: #fff;
+}
+
+.contacts {
+    grid-area: contact;
+    gap: 1em;
+}
+
+.contacts > div {
+    display: flex;
+    gap: 1.5em;
+}
+
+.contacts img {
+    height: 21px;
+}
+
+.about-us, .career {
+    gap: 20px;
+}
+
+.about-us a:hover, .career a:hover {
+    border-bottom: 1px solid;
+    display: block;
+}
+
+.about-us {
+    grid-area: about;
+}
+
+.career {
+    grid-area: career;
+}
+
+.social-media {
+    grid-area: icons;
+    justify-content: space-between;
+}
+
+.social-media a {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 10px;
 }
 
 
-/* .attribution { 
-    font-size: 11px; 
-    text-align: center; }
-.attribution a {
-    color: hsl(228, 45%, 44%); 
-} */
+
+
+
+
+
+
+
+
