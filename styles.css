@@ -210,7 +210,6 @@ footer a {
 
 .about-us a:hover, .career a:hover {
     border-bottom: 1px solid;
-    display: block;
 }
 
 .about-us {
@@ -231,6 +230,9 @@ footer a {
     border: 1px solid #fff;
     padding: 10px;
     margin: 10px;
+}
+.social-media a:hover {
+    color: var(--primary);
 }
 
 
