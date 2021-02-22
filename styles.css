@@ -98,7 +98,6 @@ header {
 }
 
 .header-img img {
-    flex: 1;
     max-width: 100%;
     height: auto;
 }
@@ -209,7 +208,7 @@ footer a {
 }
 
 .about-us a:hover, .career a:hover {
-    border-bottom: 1px solid;
+    text-decoration: underline;
 }
 
 .about-us {
